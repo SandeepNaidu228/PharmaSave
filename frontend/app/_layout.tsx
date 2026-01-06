@@ -12,6 +12,9 @@ export default function RootLayout() {
       {/* The Tab Navigator (This loads the (tabs) folder) */}
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       
+      {/* Pharmacy Dashboard (Route group for pharmacy owners) */}
+      <Stack.Screen name="(pharmacy)" options={{ headerShown: false }} />
+      
       {/* Details Screen (Stacks on top of everything) */}
       <Stack.Screen name="details" options={{ presentation: 'modal' }} /> 
     </Stack>

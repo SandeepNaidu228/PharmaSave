@@ -1,0 +1,265 @@
+medicine_name,symptoms,disease_category,prescription_required
+Paracetamol,fever,General,False
+Paracetamol,headache,General,False
+Paracetamol,body pain,General,False
+Paracetamol,fatigue,General,False
+Paracetamol,"fever,headache",General,False
+Paracetamol,"fever,body pain",General,False
+Paracetamol,"fever,fatigue",General,False
+Paracetamol,"headache,body pain",General,False
+Paracetamol,"headache,fatigue",General,False
+Paracetamol,"body pain,fatigue",General,False
+Paracetamol,"fever,headache,body pain",General,False
+Paracetamol,"fever,headache,fatigue",General,False
+Paracetamol,"fever,body pain,fatigue",General,False
+Paracetamol,"headache,body pain,fatigue",General,False
+Paracetamol,"fever,headache,body pain,fatigue",General,False
+Dolo 650,fever,General,False
+Dolo 650,headache,General,False
+Dolo 650,body pain,General,False
+Dolo 650,fatigue,General,False
+Dolo 650,"fever,headache",General,False
+Dolo 650,"fever,body pain",General,False
+Dolo 650,"fever,fatigue",General,False
+Dolo 650,"headache,body pain",General,False
+Dolo 650,"headache,fatigue",General,False
+Dolo 650,"body pain,fatigue",General,False
+Dolo 650,"fever,headache,body pain",General,False
+Dolo 650,"fever,headache,fatigue",General,False
+Dolo 650,"fever,body pain,fatigue",General,False
+Dolo 650,"headache,body pain,fatigue",General,False
+Dolo 650,"fever,headache,body pain,fatigue",General,False
+Crocin,fever,General,False
+Crocin,headache,General,False
+Crocin,body pain,General,False
+Crocin,fatigue,General,False
+Crocin,"fever,headache",General,False
+Crocin,"fever,body pain",General,False
+Crocin,"fever,fatigue",General,False
+Crocin,"headache,body pain",General,False
+Crocin,"headache,fatigue",General,False
+Crocin,"body pain,fatigue",General,False
+Crocin,"fever,headache,body pain",General,False
+Crocin,"fever,headache,fatigue",General,False
+Crocin,"fever,body pain,fatigue",General,False
+Crocin,"headache,body pain,fatigue",General,False
+Crocin,"fever,headache,body pain,fatigue",General,False
+Calpol,fever,General,False
+Calpol,headache,General,False
+Calpol,body pain,General,False
+Calpol,fatigue,General,False
+Calpol,"fever,headache",General,False
+Calpol,"fever,body pain",General,False
+Calpol,"fever,fatigue",General,False
+Calpol,"headache,body pain",General,False
+Calpol,"headache,fatigue",General,False
+Calpol,"body pain,fatigue",General,False
+Calpol,"fever,headache,body pain",General,False
+Calpol,"fever,headache,fatigue",General,False
+Calpol,"fever,body pain,fatigue",General,False
+Calpol,"headache,body pain,fatigue",General,False
+Calpol,"fever,headache,body pain,fatigue",General,False
+Cetirizine,cold,Cold & Allergy,False
+Cetirizine,cough,Cold & Allergy,False
+Cetirizine,sneezing,Cold & Allergy,False
+Cetirizine,runny nose,Cold & Allergy,False
+Cetirizine,"cold,cough",Cold & Allergy,False
+Cetirizine,"cold,sneezing",Cold & Allergy,False
+Cetirizine,"cold,runny nose",Cold & Allergy,False
+Cetirizine,"cough,sneezing",Cold & Allergy,False
+Cetirizine,"cough,runny nose",Cold & Allergy,False
+Cetirizine,"sneezing,runny nose",Cold & Allergy,False
+Cetirizine,"cold,cough,sneezing",Cold & Allergy,False
+Cetirizine,"cold,cough,runny nose",Cold & Allergy,False
+Cetirizine,"cold,sneezing,runny nose",Cold & Allergy,False
+Cetirizine,"cough,sneezing,runny nose",Cold & Allergy,False
+Cetirizine,"cold,cough,sneezing,runny nose",Cold & Allergy,False
+Levocetirizine,cold,Cold & Allergy,False
+Levocetirizine,cough,Cold & Allergy,False
+Levocetirizine,sneezing,Cold & Allergy,False
+Levocetirizine,runny nose,Cold & Allergy,False
+Levocetirizine,"cold,cough",Cold & Allergy,False
+Levocetirizine,"cold,sneezing",Cold & Allergy,False
+Levocetirizine,"cold,runny nose",Cold & Allergy,False
+Levocetirizine,"cough,sneezing",Cold & Allergy,False
+Levocetirizine,"cough,runny nose",Cold & Allergy,False
+Levocetirizine,"sneezing,runny nose",Cold & Allergy,False
+Levocetirizine,"cold,cough,sneezing",Cold & Allergy,False
+Levocetirizine,"cold,cough,runny nose",Cold & Allergy,False
+Levocetirizine,"cold,sneezing,runny nose",Cold & Allergy,False
+Levocetirizine,"cough,sneezing,runny nose",Cold & Allergy,False
+Levocetirizine,"cold,cough,sneezing,runny nose",Cold & Allergy,False
+Benadryl,cold,Cold & Allergy,False
+Benadryl,cough,Cold & Allergy,False
+Benadryl,sneezing,Cold & Allergy,False
+Benadryl,runny nose,Cold & Allergy,False
+Benadryl,"cold,cough",Cold & Allergy,False
+Benadryl,"cold,sneezing",Cold & Allergy,False
+Benadryl,"cold,runny nose",Cold & Allergy,False
+Benadryl,"cough,sneezing",Cold & Allergy,False
+Benadryl,"cough,runny nose",Cold & Allergy,False
+Benadryl,"sneezing,runny nose",Cold & Allergy,False
+Benadryl,"cold,cough,sneezing",Cold & Allergy,False
+Benadryl,"cold,cough,runny nose",Cold & Allergy,False
+Benadryl,"cold,sneezing,runny nose",Cold & Allergy,False
+Benadryl,"cough,sneezing,runny nose",Cold & Allergy,False
+Benadryl,"cold,cough,sneezing,runny nose",Cold & Allergy,False
+Cheston Cold,cold,Cold & Allergy,False
+Cheston Cold,cough,Cold & Allergy,False
+Cheston Cold,sneezing,Cold & Allergy,False
+Cheston Cold,runny nose,Cold & Allergy,False
+Cheston Cold,"cold,cough",Cold & Allergy,False
+Cheston Cold,"cold,sneezing",Cold & Allergy,False
+Cheston Cold,"cold,runny nose",Cold & Allergy,False
+Cheston Cold,"cough,sneezing",Cold & Allergy,False
+Cheston Cold,"cough,runny nose",Cold & Allergy,False
+Cheston Cold,"sneezing,runny nose",Cold & Allergy,False
+Cheston Cold,"cold,cough,sneezing",Cold & Allergy,False
+Cheston Cold,"cold,cough,runny nose",Cold & Allergy,False
+Cheston Cold,"cold,sneezing,runny nose",Cold & Allergy,False
+Cheston Cold,"cough,sneezing,runny nose",Cold & Allergy,False
+Cheston Cold,"cold,cough,sneezing,runny nose",Cold & Allergy,False
+Pan D,stomach pain,Gastrointestinal,False
+Pan D,acidity,Gastrointestinal,False
+Pan D,indigestion,Gastrointestinal,False
+Pan D,nausea,Gastrointestinal,False
+Pan D,"stomach pain,acidity",Gastrointestinal,False
+Pan D,"stomach pain,indigestion",Gastrointestinal,False
+Pan D,"stomach pain,nausea",Gastrointestinal,False
+Pan D,"acidity,indigestion",Gastrointestinal,False
+Pan D,"acidity,nausea",Gastrointestinal,False
+Pan D,"indigestion,nausea",Gastrointestinal,False
+Pan D,"stomach pain,acidity,indigestion",Gastrointestinal,False
+Pan D,"stomach pain,acidity,nausea",Gastrointestinal,False
+Pan D,"stomach pain,indigestion,nausea",Gastrointestinal,False
+Pan D,"acidity,indigestion,nausea",Gastrointestinal,False
+Pan D,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False
+Omez,stomach pain,Gastrointestinal,False
+Omez,acidity,Gastrointestinal,False
+Omez,indigestion,Gastrointestinal,False
+Omez,nausea,Gastrointestinal,False
+Omez,"stomach pain,acidity",Gastrointestinal,False
+Omez,"stomach pain,indigestion",Gastrointestinal,False
+Omez,"stomach pain,nausea",Gastrointestinal,False
+Omez,"acidity,indigestion",Gastrointestinal,False
+Omez,"acidity,nausea",Gastrointestinal,False
+Omez,"indigestion,nausea",Gastrointestinal,False
+Omez,"stomach pain,acidity,indigestion",Gastrointestinal,False
+Omez,"stomach pain,acidity,nausea",Gastrointestinal,False
+Omez,"stomach pain,indigestion,nausea",Gastrointestinal,False
+Omez,"acidity,indigestion,nausea",Gastrointestinal,False
+Omez,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False
+Gelusil,stomach pain,Gastrointestinal,False
+Gelusil,acidity,Gastrointestinal,False
+Gelusil,indigestion,Gastrointestinal,False
+Gelusil,nausea,Gastrointestinal,False
+Gelusil,"stomach pain,acidity",Gastrointestinal,False
+Gelusil,"stomach pain,indigestion",Gastrointestinal,False
+Gelusil,"stomach pain,nausea",Gastrointestinal,False
+Gelusil,"acidity,indigestion",Gastrointestinal,False
+Gelusil,"acidity,nausea",Gastrointestinal,False
+Gelusil,"indigestion,nausea",Gastrointestinal,False
+Gelusil,"stomach pain,acidity,indigestion",Gastrointestinal,False
+Gelusil,"stomach pain,acidity,nausea",Gastrointestinal,False
+Gelusil,"stomach pain,indigestion,nausea",Gastrointestinal,False
+Gelusil,"acidity,indigestion,nausea",Gastrointestinal,False
+Gelusil,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False
+Digene,stomach pain,Gastrointestinal,False
+Digene,acidity,Gastrointestinal,False
+Digene,indigestion,Gastrointestinal,False
+Digene,nausea,Gastrointestinal,False
+Digene,"stomach pain,acidity",Gastrointestinal,False
+Digene,"stomach pain,indigestion",Gastrointestinal,False
+Digene,"stomach pain,nausea",Gastrointestinal,False
+Digene,"acidity,indigestion",Gastrointestinal,False
+Digene,"acidity,nausea",Gastrointestinal,False
+Digene,"indigestion,nausea",Gastrointestinal,False
+Digene,"stomach pain,acidity,indigestion",Gastrointestinal,False
+Digene,"stomach pain,acidity,nausea",Gastrointestinal,False
+Digene,"stomach pain,indigestion,nausea",Gastrointestinal,False
+Digene,"acidity,indigestion,nausea",Gastrointestinal,False
+Digene,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False
+Azithromycin,fever,Infection,True
+Azithromycin,infection,Infection,True
+Azithromycin,inflammation,Infection,True
+Azithromycin,"fever,infection",Infection,True
+Azithromycin,"fever,inflammation",Infection,True
+Azithromycin,"infection,inflammation",Infection,True
+Azithromycin,"fever,infection,inflammation",Infection,True
+Amoxicillin,fever,Infection,True
+Amoxicillin,infection,Infection,True
+Amoxicillin,inflammation,Infection,True
+Amoxicillin,"fever,infection",Infection,True
+Amoxicillin,"fever,inflammation",Infection,True
+Amoxicillin,"infection,inflammation",Infection,True
+Amoxicillin,"fever,infection,inflammation",Infection,True
+Ciprofloxacin,fever,Infection,True
+Ciprofloxacin,infection,Infection,True
+Ciprofloxacin,inflammation,Infection,True
+Ciprofloxacin,"fever,infection",Infection,True
+Ciprofloxacin,"fever,inflammation",Infection,True
+Ciprofloxacin,"infection,inflammation",Infection,True
+Ciprofloxacin,"fever,infection,inflammation",Infection,True
+Metformin,high blood sugar,Diabetes,True
+Metformin,frequent urination,Diabetes,True
+Metformin,thirst,Diabetes,True
+Metformin,"high blood sugar,frequent urination",Diabetes,True
+Metformin,"high blood sugar,thirst",Diabetes,True
+Metformin,"frequent urination,thirst",Diabetes,True
+Metformin,"high blood sugar,frequent urination,thirst",Diabetes,True
+Glycomet,high blood sugar,Diabetes,True
+Glycomet,frequent urination,Diabetes,True
+Glycomet,thirst,Diabetes,True
+Glycomet,"high blood sugar,frequent urination",Diabetes,True
+Glycomet,"high blood sugar,thirst",Diabetes,True
+Glycomet,"frequent urination,thirst",Diabetes,True
+Glycomet,"high blood sugar,frequent urination,thirst",Diabetes,True
+Glibenclamide,high blood sugar,Diabetes,True
+Glibenclamide,frequent urination,Diabetes,True
+Glibenclamide,thirst,Diabetes,True
+Glibenclamide,"high blood sugar,frequent urination",Diabetes,True
+Glibenclamide,"high blood sugar,thirst",Diabetes,True
+Glibenclamide,"frequent urination,thirst",Diabetes,True
+Glibenclamide,"high blood sugar,frequent urination,thirst",Diabetes,True
+Amlodipine,high blood pressure,Hypertension,True
+Amlodipine,dizziness,Hypertension,True
+Amlodipine,chest pain,Hypertension,True
+Amlodipine,"high blood pressure,dizziness",Hypertension,True
+Amlodipine,"high blood pressure,chest pain",Hypertension,True
+Amlodipine,"dizziness,chest pain",Hypertension,True
+Amlodipine,"high blood pressure,dizziness,chest pain",Hypertension,True
+Losartan,high blood pressure,Hypertension,True
+Losartan,dizziness,Hypertension,True
+Losartan,chest pain,Hypertension,True
+Losartan,"high blood pressure,dizziness",Hypertension,True
+Losartan,"high blood pressure,chest pain",Hypertension,True
+Losartan,"dizziness,chest pain",Hypertension,True
+Losartan,"high blood pressure,dizziness,chest pain",Hypertension,True
+Telmisartan,high blood pressure,Hypertension,True
+Telmisartan,dizziness,Hypertension,True
+Telmisartan,chest pain,Hypertension,True
+Telmisartan,"high blood pressure,dizziness",Hypertension,True
+Telmisartan,"high blood pressure,chest pain",Hypertension,True
+Telmisartan,"dizziness,chest pain",Hypertension,True
+Telmisartan,"high blood pressure,dizziness,chest pain",Hypertension,True
+Ibuprofen,joint pain,Pain & Inflammation,False
+Ibuprofen,swelling,Pain & Inflammation,False
+Ibuprofen,muscle pain,Pain & Inflammation,False
+Ibuprofen,"joint pain,swelling",Pain & Inflammation,False
+Ibuprofen,"joint pain,muscle pain",Pain & Inflammation,False
+Ibuprofen,"swelling,muscle pain",Pain & Inflammation,False
+Ibuprofen,"joint pain,swelling,muscle pain",Pain & Inflammation,False
+Diclofenac,joint pain,Pain & Inflammation,False
+Diclofenac,swelling,Pain & Inflammation,False
+Diclofenac,muscle pain,Pain & Inflammation,False
+Diclofenac,"joint pain,swelling",Pain & Inflammation,False
+Diclofenac,"joint pain,muscle pain",Pain & Inflammation,False
+Diclofenac,"swelling,muscle pain",Pain & Inflammation,False
+Diclofenac,"joint pain,swelling,muscle pain",Pain & Inflammation,False
+Voveran,joint pain,Pain & Inflammation,False
+Voveran,swelling,Pain & Inflammation,False
+Voveran,muscle pain,Pain & Inflammation,False
+Voveran,"joint pain,swelling",Pain & Inflammation,False
+Voveran,"joint pain,muscle pain",Pain & Inflammation,False
+Voveran,"swelling,muscle pain",Pain & Inflammation,False
+Voveran,"joint pain,swelling,muscle pain",Pain & Inflammation,False

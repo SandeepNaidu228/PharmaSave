@@ -68,6 +68,27 @@ export const getNearbyPharmacies = async (req, res) => {
 };
 
 /**
+ * @desc    Get pharmacy by owner (logged-in user)
+ * @route   GET /api/pharmacies/my
+ * @access  Protected (pharmacy owner)
+ */
+export const getMyPharmacy = async (req, res) => {
+  try {
+    const pharmacy = await Pharmacy.findOne({ owner: req.user._id });
+
+    if (!pharmacy) {
+      return res.status(404).json({
+        message: "Pharmacy not linked to this account",
+      });
+    }
+
+    res.json(pharmacy);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
  * @desc    Get pharmacy by ID
  * @route   GET /api/pharmacies/:id
  * @access  Public

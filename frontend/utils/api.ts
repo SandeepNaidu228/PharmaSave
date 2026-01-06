@@ -1,150 +1,114 @@
-// API Configuration and Service Layer
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://10.136.185.131:5000/api';
+const API_BASE_URL =
+  process.env.EXPO_PUBLIC_API_URL || 'http://10.136.185.131:5000/api';
 
-// Helper function to get auth token from AsyncStorage
+// Get token from AsyncStorage
 const getToken = async (): Promise<string | null> => {
   try {
-    const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+    const AsyncStorage =
+      require('@react-native-async-storage/async-storage').default;
     const authData = await AsyncStorage.getItem('auth-storage');
     if (authData) {
       const parsed = JSON.parse(authData);
-      // Zustand persist stores data in state property
       return parsed.state?.token || null;
     }
     return null;
-  } catch (error) {
-    console.error('Error getting token:', error);
+  } catch {
     return null;
   }
 };
 
-// Generic API request function
+// Generic API request
 const apiRequest = async (
   endpoint: string,
   options: RequestInit = {}
 ): Promise<any> => {
   const token = await getToken();
-  
+
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     ...(options.headers as Record<string, string> || {}),
   };
 
-  if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
-  }
+  if (token) headers['Authorization'] = `Bearer ${token}`;
 
-  const url = `${API_BASE_URL}${endpoint}`;
-  
-  try {
-    const response = await fetch(url, {
-      ...options,
-      headers,
-    });
+  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    ...options,
+    headers,
+  });
 
-    const data = await response.json();
+  const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(data.message || 'Request failed');
-    }
+  if (!response.ok) throw new Error(data.message || 'Request failed');
 
-    return data;
-  } catch (error: any) {
-    console.error(`API Error [${endpoint}]:`, error);
-    throw error;
-  }
+  return data;
 };
 
 // Auth API
 export const authAPI = {
-  register: async (name: string, email: string, password: string, role?: string) => {
-    return apiRequest('/auth/register', {
+  register: (name: string, email: string, password: string, role?: string) =>
+    apiRequest('/auth/register', {
       method: 'POST',
       body: JSON.stringify({ name, email, password, role }),
-    });
-  },
+    }),
 
-  login: async (email: string, password: string) => {
-    return apiRequest('/auth/login', {
+  login: (email: string, password: string) =>
+    apiRequest('/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
-    });
-  },
+    }),
 
-  getMe: async () => {
-    return apiRequest('/auth/me', {
-      method: 'GET',
-    });
-  },
+  getMe: () => apiRequest('/auth/me'),
 };
 
 // Medicine API
 export const medicineAPI = {
-  getAll: async () => {
-    return apiRequest('/medicines', {
-      method: 'GET',
-    });
-  },
-
-  search: async (query?: string, nearExpiry?: boolean, highDiscount?: boolean) => {
-    const params = new URLSearchParams();
-    if (query) params.append('q', query);
-    if (nearExpiry) params.append('nearExpiry', 'true');
-    if (highDiscount) params.append('highDiscount', 'true');
-    
-    const queryString = params.toString();
-    return apiRequest(`/medicines/search${queryString ? `?${queryString}` : ''}`, {
-      method: 'GET',
-    });
-  },
-
-  getById: async (id: string) => {
-    return apiRequest(`/medicines/${id}`, {
-      method: 'GET',
-    });
-  },
+  getAll: () => apiRequest('/medicines'),
+  getById: (id: string) => apiRequest(`/medicines/${id}`),
 };
 
 // Pharmacy API
 export const pharmacyAPI = {
-  getNearby: async (latitude: number, longitude: number, distance?: number) => {
+  getNearby: (latitude: number, longitude: number, distance?: number) => {
     const params = new URLSearchParams();
     params.append('latitude', latitude.toString());
     params.append('longitude', longitude.toString());
     if (distance) params.append('distance', distance.toString());
-    
-    return apiRequest(`/pharmacies/nearby?${params.toString()}`, {
-      method: 'GET',
-    });
+    return apiRequest(`/pharmacies/nearby?${params.toString()}`);
   },
 
-  getById: async (id: string) => {
-    return apiRequest(`/pharmacies/${id}`, {
-      method: 'GET',
-    });
-  },
+  getMyPharmacy: () => apiRequest('/pharmacies/my'),
+
+  create: (name: string, address: string, latitude: number, longitude: number) =>
+    apiRequest('/pharmacies', {
+      method: 'POST',
+      body: JSON.stringify({ name, address, latitude, longitude }),
+    }),
 };
 
 // Order API
 export const orderAPI = {
-  create: async (medicineId: string, quantity: number) => {
-    return apiRequest('/orders', {
+  create: (medicineId: string, quantity: number) =>
+    apiRequest('/orders', {
       method: 'POST',
       body: JSON.stringify({ medicineId, quantity }),
-    });
-  },
+    }),
 
-  getMyOrders: async () => {
-    return apiRequest('/orders/my', {
-      method: 'GET',
-    });
-  },
-
-  updateStatus: async (orderId: string, status: 'picked' | 'expired') => {
-    return apiRequest(`/orders/${orderId}`, {
-      method: 'PUT',
-      body: JSON.stringify({ status }),
-    });
-  },
+  getMyOrders: () => apiRequest('/orders/my'),
 };
 
+// Pharmacy Owner API
+export const pharmacyOwnerAPI = {
+  getMyPharmacy: () => apiRequest('/pharmacies/my'),
+
+  createMedicine: (data: {
+    name: string;
+    brand: string;
+    expiryDate: string;
+    quantity: number;
+    originalPrice: number;
+  }) =>
+    apiRequest('/medicines', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
+};

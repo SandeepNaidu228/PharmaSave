@@ -3,12 +3,18 @@ import { View, Text, TouchableOpacity, SafeAreaView, TextInput, ScrollView, Styl
 import { router } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useAuthStore } from '../store/useAuthStore';
+import { pharmacyAPI } from '../utils/api';
 
 export default function LoginPage() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isPharmacy, setIsPharmacy] = useState(false);
+  const [pharmacyName, setPharmacyName] = useState('');
+  const [pharmacyAddress, setPharmacyAddress] = useState('');
+  const [latitude, setLatitude] = useState('');
+  const [longitude, setLongitude] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login, register } = useAuthStore();
   
@@ -20,9 +26,14 @@ export default function LoginPage() {
 
     setIsLoading(true);
     try {
-      await login(email, password);
-      // Navigate to the main app (Home Tab) on success
-      router.replace('/(tabs)/home');
+      const response = await login(email, password);
+      // Check user role and redirect accordingly
+      const userRole = response?.role || 'citizen';
+      if (userRole === 'pharmacy') {
+        router.replace('/dashboard' as any);
+      } else {
+        router.replace('/(tabs)/home');
+      }
     } catch (err: any) {
       Alert.alert('Login Failed', err.message || 'Invalid credentials');
     } finally {
@@ -32,7 +43,7 @@ export default function LoginPage() {
 
   const handleRegister = async () => {
     if (!name || !email || !password) {
-      Alert.alert('Error', 'Please fill in all fields');
+      Alert.alert('Error', 'Please fill in all required fields');
       return;
     }
 
@@ -41,11 +52,66 @@ export default function LoginPage() {
       return;
     }
 
+    // Validate pharmacy fields if registering as pharmacy
+    if (isPharmacy) {
+      if (!pharmacyName || !pharmacyAddress || !latitude || !longitude) {
+        Alert.alert('Error', 'Please fill in all pharmacy details');
+        return;
+      }
+
+      const lat = parseFloat(latitude);
+      const lng = parseFloat(longitude);
+
+      if (isNaN(lat) || isNaN(lng)) {
+        Alert.alert('Error', 'Please enter valid latitude and longitude');
+        return;
+      }
+
+      if (lat < -90 || lat > 90) {
+        Alert.alert('Error', 'Latitude must be between -90 and 90');
+        return;
+      }
+
+      if (lng < -180 || lng > 180) {
+        Alert.alert('Error', 'Longitude must be between -180 and 180');
+        return;
+      }
+    }
+
     setIsLoading(true);
     try {
-      await register(name, email, password);
-      // Navigate to the main app (Home Tab) on success
-      router.replace('/(tabs)/home');
+      // Register user with role
+      const role = isPharmacy ? 'pharmacy' : 'citizen';
+      const response = await register(name, email, password, role);
+
+      // If pharmacy, create pharmacy record
+      if (isPharmacy) {
+        try {
+          // Small delay to ensure token is persisted
+          await new Promise(resolve => setTimeout(resolve, 100));
+          await pharmacyAPI.create(
+            pharmacyName,
+            pharmacyAddress,
+            parseFloat(latitude),
+            parseFloat(longitude)
+          );
+        } catch (pharmacyError: any) {
+          console.error('Pharmacy creation error:', pharmacyError);
+          Alert.alert(
+            'Warning',
+            'Account created but pharmacy details failed to save. Please update your pharmacy info in settings.',
+            [{ text: 'OK' }]
+          );
+        }
+      }
+
+      // Check user role and redirect accordingly
+      const userRole = response?.role || 'citizen';
+      if (userRole === 'pharmacy') {
+        router.replace('/dashboard' as any);
+      } else {
+        router.replace('/(tabs)/home');
+      }
     } catch (err: any) {
       Alert.alert('Registration Failed', err.message || 'Failed to create account');
     } finally {
@@ -144,6 +210,103 @@ export default function LoginPage() {
                 onChangeText={setPassword}
               />
             </View>
+
+            {/* Pharmacy Registration Option */}
+            {isSignUp && (
+              <>
+                <View style={styles.checkboxContainer}>
+                  <TouchableOpacity
+                    style={styles.checkbox}
+                    onPress={() => {
+                      setIsPharmacy(!isPharmacy);
+                      // Reset pharmacy fields when unchecking
+                      if (isPharmacy) {
+                        setPharmacyName('');
+                        setPharmacyAddress('');
+                        setLatitude('');
+                        setLongitude('');
+                      }
+                    }}
+                    activeOpacity={0.7}
+                  >
+                    {isPharmacy && (
+                      <MaterialIcons name="check" size={20} color="#13ec80" />
+                    )}
+                  </TouchableOpacity>
+                  <Text style={styles.checkboxLabel}>
+                    I am registering as a Pharmacy Owner
+                  </Text>
+                </View>
+
+                {/* Pharmacy Details Fields */}
+                {isPharmacy && (
+                  <View style={styles.pharmacySection}>
+                    <Text style={styles.sectionTitle}>Pharmacy Details</Text>
+                    
+                    <Text style={styles.label}>Pharmacy Name *</Text>
+                    <View style={styles.inputContainer}>
+                      <TextInput 
+                        style={styles.input}
+                        placeholder="Enter pharmacy name" 
+                        placeholderTextColor="#9ca3af"
+                        value={pharmacyName}
+                        onChangeText={setPharmacyName}
+                      />
+                    </View>
+
+                    <Text style={[styles.label, { marginTop: 16 }]}>Pharmacy Address *</Text>
+                    <View style={styles.inputContainer}>
+                      <TextInput 
+                        style={styles.input}
+                        placeholder="Enter full address" 
+                        placeholderTextColor="#9ca3af"
+                        value={pharmacyAddress}
+                        onChangeText={setPharmacyAddress}
+                        multiline
+                        numberOfLines={2}
+                      />
+                    </View>
+
+                    <View style={styles.locationRow}>
+                      <View style={styles.locationInput}>
+                        <Text style={styles.label}>Latitude *</Text>
+                        <View style={styles.inputContainer}>
+                          <TextInput 
+                            style={styles.input}
+                            placeholder="e.g., 40.7128" 
+                            placeholderTextColor="#9ca3af"
+                            keyboardType="decimal-pad"
+                            value={latitude}
+                            onChangeText={setLatitude}
+                          />
+                        </View>
+                      </View>
+
+                      <View style={styles.locationInput}>
+                        <Text style={styles.label}>Longitude *</Text>
+                        <View style={styles.inputContainer}>
+                          <TextInput 
+                            style={styles.input}
+                            placeholder="e.g., -74.0060" 
+                            placeholderTextColor="#9ca3af"
+                            keyboardType="decimal-pad"
+                            value={longitude}
+                            onChangeText={setLongitude}
+                          />
+                        </View>
+                      </View>
+                    </View>
+
+                    <View style={styles.locationHint}>
+                      <MaterialIcons name="info" size={16} color="#6b7280" />
+                      <Text style={styles.hintText}>
+                        You can find coordinates using Google Maps or a GPS app
+                      </Text>
+                    </View>
+                  </View>
+                )}
+              </>
+            )}
           </View>
 
           {/* Action Button */}
@@ -172,7 +335,17 @@ export default function LoginPage() {
             <Text style={styles.toggleText}>
               {isSignUp ? 'Already have an account? ' : "Don't have an account? "}
             </Text>
-            <TouchableOpacity onPress={() => setIsSignUp(!isSignUp)}>
+            <TouchableOpacity onPress={() => {
+              setIsSignUp(!isSignUp);
+              // Reset pharmacy fields when switching
+              if (isSignUp) {
+                setIsPharmacy(false);
+                setPharmacyName('');
+                setPharmacyAddress('');
+                setLatitude('');
+                setLongitude('');
+              }
+            }}>
               <Text style={styles.toggleLink}>
                 {isSignUp ? 'Sign In' : 'Sign Up'}
               </Text>
@@ -408,5 +581,63 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     color: '#13ec80',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 8,
+  },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 6,
+    borderWidth: 2,
+    borderColor: '#13ec80',
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  checkboxLabel: {
+    fontSize: 14,
+    color: '#374151',
+    flex: 1,
+  },
+  pharmacySection: {
+    marginTop: 20,
+    padding: 16,
+    backgroundColor: '#f9fafb',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#e5e7eb',
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#111814',
+    marginBottom: 16,
+  },
+  locationRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 16,
+  },
+  locationInput: {
+    flex: 1,
+  },
+  locationHint: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 12,
+    padding: 12,
+    backgroundColor: '#eff6ff',
+    borderRadius: 8,
+    gap: 8,
+  },
+  hintText: {
+    fontSize: 12,
+    color: '#1e40af',
+    flex: 1,
   },
 });

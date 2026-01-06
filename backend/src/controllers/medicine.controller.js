@@ -8,38 +8,29 @@ import Pharmacy from "../models/Pharmacy.js";
  */
 export const createMedicine = async (req, res) => {
   try {
-    const {
-      name,
-      brand,
-      pharmacy,
-      expiryDate,
-      quantity,
-      originalPrice,
-    } = req.body;
+    const { name, brand, expiryDate, quantity, originalPrice } = req.body;
 
     if (
       !name ||
       !brand ||
-      !pharmacy ||
       !expiryDate ||
-      !quantity ||
-      !originalPrice
+      quantity === undefined ||
+      originalPrice === undefined
     ) {
-      return res.status(400).json({
-        message: "All medicine fields are required",
-      });
+      return res.status(400).json({ message: "All medicine fields are required" });
     }
 
-    // Ensure pharmacy exists
-    const pharmacyExists = await Pharmacy.findById(pharmacy);
-    if (!pharmacyExists) {
-      return res.status(404).json({ message: "Pharmacy not found" });
+    // 🔥 Get pharmacy automatically from logged-in user
+    const pharmacy = await Pharmacy.findOne({ owner: req.user._id });
+
+    if (!pharmacy) {
+      return res.status(404).json({ message: "No pharmacy linked to this account" });
     }
 
     const medicine = await Medicine.create({
       name,
       brand,
-      pharmacy,
+      pharmacy: pharmacy._id,
       expiryDate,
       quantity,
       originalPrice,
@@ -52,7 +43,7 @@ export const createMedicine = async (req, res) => {
 };
 
 /**
- * @desc    Get all medicines (prioritize near-expiry)
+ * @desc    Get all medicines
  * @route   GET /api/medicines
  * @access  Public
  */
@@ -60,11 +51,7 @@ export const getAllMedicines = async (req, res) => {
   try {
     const medicines = await Medicine.find()
       .populate("pharmacy", "name address")
-      .sort({
-        isNearExpiry: -1,   // near-expiry first
-        expiryDays: 1,      // fewer days first
-        discountPercent: -1 // higher discount first
-      });
+      .sort({ isNearExpiry: -1, expiryDays: 1, discountPercent: -1 });
 
     res.json(medicines);
   } catch (error) {
@@ -73,37 +60,22 @@ export const getAllMedicines = async (req, res) => {
 };
 
 /**
- * @desc    Search medicines by name + filters
+ * @desc    Search medicines
  * @route   GET /api/medicines/search
  * @access  Public
  */
 export const searchMedicines = async (req, res) => {
   try {
     const { q, nearExpiry, highDiscount } = req.query;
-
     let filter = {};
 
-    // Text search
-    if (q) {
-      filter.name = { $regex: q, $options: "i" };
-    }
-
-    // Near expiry filter
-    if (nearExpiry === "true") {
-      filter.isNearExpiry = true;
-    }
-
-    // High discount filter
-    if (highDiscount === "true") {
-      filter.discountPercent = { $gte: 50 };
-    }
+    if (q) filter.name = { $regex: q, $options: "i" };
+    if (nearExpiry === "true") filter.isNearExpiry = true;
+    if (highDiscount === "true") filter.discountPercent = { $gte: 50 };
 
     const medicines = await Medicine.find(filter)
       .populate("pharmacy", "name address")
-      .sort({
-        expiryDays: 1,
-        discountPercent: -1,
-      });
+      .sort({ expiryDays: 1, discountPercent: -1 });
 
     res.json(medicines);
   } catch (error) {
@@ -111,11 +83,6 @@ export const searchMedicines = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get single medicine by ID
- * @route   GET /api/medicines/:id
- * @access  Public
- */
 export const getMedicineById = async (req, res) => {
   try {
     const medicine = await Medicine.findById(req.params.id).populate(
@@ -123,9 +90,7 @@ export const getMedicineById = async (req, res) => {
       "name address"
     );
 
-    if (!medicine) {
-      return res.status(404).json({ message: "Medicine not found" });
-    }
+    if (!medicine) return res.status(404).json({ message: "Medicine not found" });
 
     res.json(medicine);
   } catch (error) {

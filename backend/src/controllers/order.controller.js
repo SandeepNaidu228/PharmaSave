@@ -93,3 +93,24 @@ export const updateOrderStatus = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+/**
+ * @desc    Get orders for a pharmacy
+ * @route   GET /api/orders/pharmacy/:pharmacyId
+ * @access  Protected (pharmacy owner)
+ */
+export const getOrdersByPharmacy = async (req, res) => {
+  try {
+    const { pharmacyId } = req.params;
+
+    const orders = await Order.find({ pharmacy: pharmacyId })
+      .populate("medicine", "name brand")
+      .populate("user", "name email")
+      .sort({ createdAt: -1 });
+
+    res.json(orders);
+  } catch (error) {
+    console.error("Pharmacy orders error:", error);
+    res.status(500).json({ message: "Failed to fetch pharmacy orders" });
+  }
+};

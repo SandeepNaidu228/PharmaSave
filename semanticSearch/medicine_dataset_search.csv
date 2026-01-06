@@ -1,0 +1,265 @@
+medicine_name,symptoms,disease_category,prescription_required,symptom_description,search_text
+Paracetamol,fever,General,False,fever,paracetamol fever
+Paracetamol,headache,General,False,headache,paracetamol headache
+Paracetamol,body pain,General,False,body pain,paracetamol body pain
+Paracetamol,fatigue,General,False,fatigue,paracetamol fatigue
+Paracetamol,"fever,headache",General,False,fever headache,paracetamol fever headache
+Paracetamol,"fever,body pain",General,False,fever body pain,paracetamol fever body pain
+Paracetamol,"fever,fatigue",General,False,fever fatigue,paracetamol fever fatigue
+Paracetamol,"headache,body pain",General,False,headache body pain,paracetamol headache body pain
+Paracetamol,"headache,fatigue",General,False,headache fatigue,paracetamol headache fatigue
+Paracetamol,"body pain,fatigue",General,False,body pain fatigue,paracetamol body pain fatigue
+Paracetamol,"fever,headache,body pain",General,False,fever headache body pain,paracetamol fever headache body pain
+Paracetamol,"fever,headache,fatigue",General,False,fever headache fatigue,paracetamol fever headache fatigue
+Paracetamol,"fever,body pain,fatigue",General,False,fever body pain fatigue,paracetamol fever body pain fatigue
+Paracetamol,"headache,body pain,fatigue",General,False,headache body pain fatigue,paracetamol headache body pain fatigue
+Paracetamol,"fever,headache,body pain,fatigue",General,False,fever headache body pain fatigue,paracetamol fever headache body pain fatigue
+Dolo 650,fever,General,False,fever,dolo 650 fever
+Dolo 650,headache,General,False,headache,dolo 650 headache
+Dolo 650,body pain,General,False,body pain,dolo 650 body pain
+Dolo 650,fatigue,General,False,fatigue,dolo 650 fatigue
+Dolo 650,"fever,headache",General,False,fever headache,dolo 650 fever headache
+Dolo 650,"fever,body pain",General,False,fever body pain,dolo 650 fever body pain
+Dolo 650,"fever,fatigue",General,False,fever fatigue,dolo 650 fever fatigue
+Dolo 650,"headache,body pain",General,False,headache body pain,dolo 650 headache body pain
+Dolo 650,"headache,fatigue",General,False,headache fatigue,dolo 650 headache fatigue
+Dolo 650,"body pain,fatigue",General,False,body pain fatigue,dolo 650 body pain fatigue
+Dolo 650,"fever,headache,body pain",General,False,fever headache body pain,dolo 650 fever headache body pain
+Dolo 650,"fever,headache,fatigue",General,False,fever headache fatigue,dolo 650 fever headache fatigue
+Dolo 650,"fever,body pain,fatigue",General,False,fever body pain fatigue,dolo 650 fever body pain fatigue
+Dolo 650,"headache,body pain,fatigue",General,False,headache body pain fatigue,dolo 650 headache body pain fatigue
+Dolo 650,"fever,headache,body pain,fatigue",General,False,fever headache body pain fatigue,dolo 650 fever headache body pain fatigue
+Crocin,fever,General,False,fever,crocin fever
+Crocin,headache,General,False,headache,crocin headache
+Crocin,body pain,General,False,body pain,crocin body pain
+Crocin,fatigue,General,False,fatigue,crocin fatigue
+Crocin,"fever,headache",General,False,fever headache,crocin fever headache
+Crocin,"fever,body pain",General,False,fever body pain,crocin fever body pain
+Crocin,"fever,fatigue",General,False,fever fatigue,crocin fever fatigue
+Crocin,"headache,body pain",General,False,headache body pain,crocin headache body pain
+Crocin,"headache,fatigue",General,False,headache fatigue,crocin headache fatigue
+Crocin,"body pain,fatigue",General,False,body pain fatigue,crocin body pain fatigue
+Crocin,"fever,headache,body pain",General,False,fever headache body pain,crocin fever headache body pain
+Crocin,"fever,headache,fatigue",General,False,fever headache fatigue,crocin fever headache fatigue
+Crocin,"fever,body pain,fatigue",General,False,fever body pain fatigue,crocin fever body pain fatigue
+Crocin,"headache,body pain,fatigue",General,False,headache body pain fatigue,crocin headache body pain fatigue
+Crocin,"fever,headache,body pain,fatigue",General,False,fever headache body pain fatigue,crocin fever headache body pain fatigue
+Calpol,fever,General,False,fever,calpol fever
+Calpol,headache,General,False,headache,calpol headache
+Calpol,body pain,General,False,body pain,calpol body pain
+Calpol,fatigue,General,False,fatigue,calpol fatigue
+Calpol,"fever,headache",General,False,fever headache,calpol fever headache
+Calpol,"fever,body pain",General,False,fever body pain,calpol fever body pain
+Calpol,"fever,fatigue",General,False,fever fatigue,calpol fever fatigue
+Calpol,"headache,body pain",General,False,headache body pain,calpol headache body pain
+Calpol,"headache,fatigue",General,False,headache fatigue,calpol headache fatigue
+Calpol,"body pain,fatigue",General,False,body pain fatigue,calpol body pain fatigue
+Calpol,"fever,headache,body pain",General,False,fever headache body pain,calpol fever headache body pain
+Calpol,"fever,headache,fatigue",General,False,fever headache fatigue,calpol fever headache fatigue
+Calpol,"fever,body pain,fatigue",General,False,fever body pain fatigue,calpol fever body pain fatigue
+Calpol,"headache,body pain,fatigue",General,False,headache body pain fatigue,calpol headache body pain fatigue
+Calpol,"fever,headache,body pain,fatigue",General,False,fever headache body pain fatigue,calpol fever headache body pain fatigue
+Cetirizine,cold,Cold & Allergy,False,cold,cetirizine cold
+Cetirizine,cough,Cold & Allergy,False,cough,cetirizine cough
+Cetirizine,sneezing,Cold & Allergy,False,sneezing,cetirizine sneezing
+Cetirizine,runny nose,Cold & Allergy,False,runny nose,cetirizine runny nose
+Cetirizine,"cold,cough",Cold & Allergy,False,cold cough,cetirizine cold cough
+Cetirizine,"cold,sneezing",Cold & Allergy,False,cold sneezing,cetirizine cold sneezing
+Cetirizine,"cold,runny nose",Cold & Allergy,False,cold runny nose,cetirizine cold runny nose
+Cetirizine,"cough,sneezing",Cold & Allergy,False,cough sneezing,cetirizine cough sneezing
+Cetirizine,"cough,runny nose",Cold & Allergy,False,cough runny nose,cetirizine cough runny nose
+Cetirizine,"sneezing,runny nose",Cold & Allergy,False,sneezing runny nose,cetirizine sneezing runny nose
+Cetirizine,"cold,cough,sneezing",Cold & Allergy,False,cold cough sneezing,cetirizine cold cough sneezing
+Cetirizine,"cold,cough,runny nose",Cold & Allergy,False,cold cough runny nose,cetirizine cold cough runny nose
+Cetirizine,"cold,sneezing,runny nose",Cold & Allergy,False,cold sneezing runny nose,cetirizine cold sneezing runny nose
+Cetirizine,"cough,sneezing,runny nose",Cold & Allergy,False,cough sneezing runny nose,cetirizine cough sneezing runny nose
+Cetirizine,"cold,cough,sneezing,runny nose",Cold & Allergy,False,cold cough sneezing runny nose,cetirizine cold cough sneezing runny nose
+Levocetirizine,cold,Cold & Allergy,False,cold,levocetirizine cold
+Levocetirizine,cough,Cold & Allergy,False,cough,levocetirizine cough
+Levocetirizine,sneezing,Cold & Allergy,False,sneezing,levocetirizine sneezing
+Levocetirizine,runny nose,Cold & Allergy,False,runny nose,levocetirizine runny nose
+Levocetirizine,"cold,cough",Cold & Allergy,False,cold cough,levocetirizine cold cough
+Levocetirizine,"cold,sneezing",Cold & Allergy,False,cold sneezing,levocetirizine cold sneezing
+Levocetirizine,"cold,runny nose",Cold & Allergy,False,cold runny nose,levocetirizine cold runny nose
+Levocetirizine,"cough,sneezing",Cold & Allergy,False,cough sneezing,levocetirizine cough sneezing
+Levocetirizine,"cough,runny nose",Cold & Allergy,False,cough runny nose,levocetirizine cough runny nose
+Levocetirizine,"sneezing,runny nose",Cold & Allergy,False,sneezing runny nose,levocetirizine sneezing runny nose
+Levocetirizine,"cold,cough,sneezing",Cold & Allergy,False,cold cough sneezing,levocetirizine cold cough sneezing
+Levocetirizine,"cold,cough,runny nose",Cold & Allergy,False,cold cough runny nose,levocetirizine cold cough runny nose
+Levocetirizine,"cold,sneezing,runny nose",Cold & Allergy,False,cold sneezing runny nose,levocetirizine cold sneezing runny nose
+Levocetirizine,"cough,sneezing,runny nose",Cold & Allergy,False,cough sneezing runny nose,levocetirizine cough sneezing runny nose
+Levocetirizine,"cold,cough,sneezing,runny nose",Cold & Allergy,False,cold cough sneezing runny nose,levocetirizine cold cough sneezing runny nose
+Benadryl,cold,Cold & Allergy,False,cold,benadryl cold
+Benadryl,cough,Cold & Allergy,False,cough,benadryl cough
+Benadryl,sneezing,Cold & Allergy,False,sneezing,benadryl sneezing
+Benadryl,runny nose,Cold & Allergy,False,runny nose,benadryl runny nose
+Benadryl,"cold,cough",Cold & Allergy,False,cold cough,benadryl cold cough
+Benadryl,"cold,sneezing",Cold & Allergy,False,cold sneezing,benadryl cold sneezing
+Benadryl,"cold,runny nose",Cold & Allergy,False,cold runny nose,benadryl cold runny nose
+Benadryl,"cough,sneezing",Cold & Allergy,False,cough sneezing,benadryl cough sneezing
+Benadryl,"cough,runny nose",Cold & Allergy,False,cough runny nose,benadryl cough runny nose
+Benadryl,"sneezing,runny nose",Cold & Allergy,False,sneezing runny nose,benadryl sneezing runny nose
+Benadryl,"cold,cough,sneezing",Cold & Allergy,False,cold cough sneezing,benadryl cold cough sneezing
+Benadryl,"cold,cough,runny nose",Cold & Allergy,False,cold cough runny nose,benadryl cold cough runny nose
+Benadryl,"cold,sneezing,runny nose",Cold & Allergy,False,cold sneezing runny nose,benadryl cold sneezing runny nose
+Benadryl,"cough,sneezing,runny nose",Cold & Allergy,False,cough sneezing runny nose,benadryl cough sneezing runny nose
+Benadryl,"cold,cough,sneezing,runny nose",Cold & Allergy,False,cold cough sneezing runny nose,benadryl cold cough sneezing runny nose
+Cheston Cold,cold,Cold & Allergy,False,cold,cheston cold cold
+Cheston Cold,cough,Cold & Allergy,False,cough,cheston cold cough
+Cheston Cold,sneezing,Cold & Allergy,False,sneezing,cheston cold sneezing
+Cheston Cold,runny nose,Cold & Allergy,False,runny nose,cheston cold runny nose
+Cheston Cold,"cold,cough",Cold & Allergy,False,cold cough,cheston cold cold cough
+Cheston Cold,"cold,sneezing",Cold & Allergy,False,cold sneezing,cheston cold cold sneezing
+Cheston Cold,"cold,runny nose",Cold & Allergy,False,cold runny nose,cheston cold cold runny nose
+Cheston Cold,"cough,sneezing",Cold & Allergy,False,cough sneezing,cheston cold cough sneezing
+Cheston Cold,"cough,runny nose",Cold & Allergy,False,cough runny nose,cheston cold cough runny nose
+Cheston Cold,"sneezing,runny nose",Cold & Allergy,False,sneezing runny nose,cheston cold sneezing runny nose
+Cheston Cold,"cold,cough,sneezing",Cold & Allergy,False,cold cough sneezing,cheston cold cold cough sneezing
+Cheston Cold,"cold,cough,runny nose",Cold & Allergy,False,cold cough runny nose,cheston cold cold cough runny nose
+Cheston Cold,"cold,sneezing,runny nose",Cold & Allergy,False,cold sneezing runny nose,cheston cold cold sneezing runny nose
+Cheston Cold,"cough,sneezing,runny nose",Cold & Allergy,False,cough sneezing runny nose,cheston cold cough sneezing runny nose
+Cheston Cold,"cold,cough,sneezing,runny nose",Cold & Allergy,False,cold cough sneezing runny nose,cheston cold cold cough sneezing runny nose
+Pan D,stomach pain,Gastrointestinal,False,stomach pain,pan d stomach pain
+Pan D,acidity,Gastrointestinal,False,acidity,pan d acidity
+Pan D,indigestion,Gastrointestinal,False,indigestion,pan d indigestion
+Pan D,nausea,Gastrointestinal,False,nausea,pan d nausea
+Pan D,"stomach pain,acidity",Gastrointestinal,False,stomach pain acidity,pan d stomach pain acidity
+Pan D,"stomach pain,indigestion",Gastrointestinal,False,stomach pain indigestion,pan d stomach pain indigestion
+Pan D,"stomach pain,nausea",Gastrointestinal,False,stomach pain nausea,pan d stomach pain nausea
+Pan D,"acidity,indigestion",Gastrointestinal,False,acidity indigestion,pan d acidity indigestion
+Pan D,"acidity,nausea",Gastrointestinal,False,acidity nausea,pan d acidity nausea
+Pan D,"indigestion,nausea",Gastrointestinal,False,indigestion nausea,pan d indigestion nausea
+Pan D,"stomach pain,acidity,indigestion",Gastrointestinal,False,stomach pain acidity indigestion,pan d stomach pain acidity indigestion
+Pan D,"stomach pain,acidity,nausea",Gastrointestinal,False,stomach pain acidity nausea,pan d stomach pain acidity nausea
+Pan D,"stomach pain,indigestion,nausea",Gastrointestinal,False,stomach pain indigestion nausea,pan d stomach pain indigestion nausea
+Pan D,"acidity,indigestion,nausea",Gastrointestinal,False,acidity indigestion nausea,pan d acidity indigestion nausea
+Pan D,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False,stomach pain acidity indigestion nausea,pan d stomach pain acidity indigestion nausea
+Omez,stomach pain,Gastrointestinal,False,stomach pain,omez stomach pain
+Omez,acidity,Gastrointestinal,False,acidity,omez acidity
+Omez,indigestion,Gastrointestinal,False,indigestion,omez indigestion
+Omez,nausea,Gastrointestinal,False,nausea,omez nausea
+Omez,"stomach pain,acidity",Gastrointestinal,False,stomach pain acidity,omez stomach pain acidity
+Omez,"stomach pain,indigestion",Gastrointestinal,False,stomach pain indigestion,omez stomach pain indigestion
+Omez,"stomach pain,nausea",Gastrointestinal,False,stomach pain nausea,omez stomach pain nausea
+Omez,"acidity,indigestion",Gastrointestinal,False,acidity indigestion,omez acidity indigestion
+Omez,"acidity,nausea",Gastrointestinal,False,acidity nausea,omez acidity nausea
+Omez,"indigestion,nausea",Gastrointestinal,False,indigestion nausea,omez indigestion nausea
+Omez,"stomach pain,acidity,indigestion",Gastrointestinal,False,stomach pain acidity indigestion,omez stomach pain acidity indigestion
+Omez,"stomach pain,acidity,nausea",Gastrointestinal,False,stomach pain acidity nausea,omez stomach pain acidity nausea
+Omez,"stomach pain,indigestion,nausea",Gastrointestinal,False,stomach pain indigestion nausea,omez stomach pain indigestion nausea
+Omez,"acidity,indigestion,nausea",Gastrointestinal,False,acidity indigestion nausea,omez acidity indigestion nausea
+Omez,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False,stomach pain acidity indigestion nausea,omez stomach pain acidity indigestion nausea
+Gelusil,stomach pain,Gastrointestinal,False,stomach pain,gelusil stomach pain
+Gelusil,acidity,Gastrointestinal,False,acidity,gelusil acidity
+Gelusil,indigestion,Gastrointestinal,False,indigestion,gelusil indigestion
+Gelusil,nausea,Gastrointestinal,False,nausea,gelusil nausea
+Gelusil,"stomach pain,acidity",Gastrointestinal,False,stomach pain acidity,gelusil stomach pain acidity
+Gelusil,"stomach pain,indigestion",Gastrointestinal,False,stomach pain indigestion,gelusil stomach pain indigestion
+Gelusil,"stomach pain,nausea",Gastrointestinal,False,stomach pain nausea,gelusil stomach pain nausea
+Gelusil,"acidity,indigestion",Gastrointestinal,False,acidity indigestion,gelusil acidity indigestion
+Gelusil,"acidity,nausea",Gastrointestinal,False,acidity nausea,gelusil acidity nausea
+Gelusil,"indigestion,nausea",Gastrointestinal,False,indigestion nausea,gelusil indigestion nausea
+Gelusil,"stomach pain,acidity,indigestion",Gastrointestinal,False,stomach pain acidity indigestion,gelusil stomach pain acidity indigestion
+Gelusil,"stomach pain,acidity,nausea",Gastrointestinal,False,stomach pain acidity nausea,gelusil stomach pain acidity nausea
+Gelusil,"stomach pain,indigestion,nausea",Gastrointestinal,False,stomach pain indigestion nausea,gelusil stomach pain indigestion nausea
+Gelusil,"acidity,indigestion,nausea",Gastrointestinal,False,acidity indigestion nausea,gelusil acidity indigestion nausea
+Gelusil,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False,stomach pain acidity indigestion nausea,gelusil stomach pain acidity indigestion nausea
+Digene,stomach pain,Gastrointestinal,False,stomach pain,digene stomach pain
+Digene,acidity,Gastrointestinal,False,acidity,digene acidity
+Digene,indigestion,Gastrointestinal,False,indigestion,digene indigestion
+Digene,nausea,Gastrointestinal,False,nausea,digene nausea
+Digene,"stomach pain,acidity",Gastrointestinal,False,stomach pain acidity,digene stomach pain acidity
+Digene,"stomach pain,indigestion",Gastrointestinal,False,stomach pain indigestion,digene stomach pain indigestion
+Digene,"stomach pain,nausea",Gastrointestinal,False,stomach pain nausea,digene stomach pain nausea
+Digene,"acidity,indigestion",Gastrointestinal,False,acidity indigestion,digene acidity indigestion
+Digene,"acidity,nausea",Gastrointestinal,False,acidity nausea,digene acidity nausea
+Digene,"indigestion,nausea",Gastrointestinal,False,indigestion nausea,digene indigestion nausea
+Digene,"stomach pain,acidity,indigestion",Gastrointestinal,False,stomach pain acidity indigestion,digene stomach pain acidity indigestion
+Digene,"stomach pain,acidity,nausea",Gastrointestinal,False,stomach pain acidity nausea,digene stomach pain acidity nausea
+Digene,"stomach pain,indigestion,nausea",Gastrointestinal,False,stomach pain indigestion nausea,digene stomach pain indigestion nausea
+Digene,"acidity,indigestion,nausea",Gastrointestinal,False,acidity indigestion nausea,digene acidity indigestion nausea
+Digene,"stomach pain,acidity,indigestion,nausea",Gastrointestinal,False,stomach pain acidity indigestion nausea,digene stomach pain acidity indigestion nausea
+Azithromycin,fever,Infection,True,fever,azithromycin fever
+Azithromycin,infection,Infection,True,infection,azithromycin infection
+Azithromycin,inflammation,Infection,True,inflammation,azithromycin inflammation
+Azithromycin,"fever,infection",Infection,True,fever infection,azithromycin fever infection
+Azithromycin,"fever,inflammation",Infection,True,fever inflammation,azithromycin fever inflammation
+Azithromycin,"infection,inflammation",Infection,True,infection inflammation,azithromycin infection inflammation
+Azithromycin,"fever,infection,inflammation",Infection,True,fever infection inflammation,azithromycin fever infection inflammation
+Amoxicillin,fever,Infection,True,fever,amoxicillin fever
+Amoxicillin,infection,Infection,True,infection,amoxicillin infection
+Amoxicillin,inflammation,Infection,True,inflammation,amoxicillin inflammation
+Amoxicillin,"fever,infection",Infection,True,fever infection,amoxicillin fever infection
+Amoxicillin,"fever,inflammation",Infection,True,fever inflammation,amoxicillin fever inflammation
+Amoxicillin,"infection,inflammation",Infection,True,infection inflammation,amoxicillin infection inflammation
+Amoxicillin,"fever,infection,inflammation",Infection,True,fever infection inflammation,amoxicillin fever infection inflammation
+Ciprofloxacin,fever,Infection,True,fever,ciprofloxacin fever
+Ciprofloxacin,infection,Infection,True,infection,ciprofloxacin infection
+Ciprofloxacin,inflammation,Infection,True,inflammation,ciprofloxacin inflammation
+Ciprofloxacin,"fever,infection",Infection,True,fever infection,ciprofloxacin fever infection
+Ciprofloxacin,"fever,inflammation",Infection,True,fever inflammation,ciprofloxacin fever inflammation
+Ciprofloxacin,"infection,inflammation",Infection,True,infection inflammation,ciprofloxacin infection inflammation
+Ciprofloxacin,"fever,infection,inflammation",Infection,True,fever infection inflammation,ciprofloxacin fever infection inflammation
+Metformin,high blood sugar,Diabetes,True,high blood sugar,metformin high blood sugar
+Metformin,frequent urination,Diabetes,True,frequent urination,metformin frequent urination
+Metformin,thirst,Diabetes,True,thirst,metformin thirst
+Metformin,"high blood sugar,frequent urination",Diabetes,True,high blood sugar frequent urination,metformin high blood sugar frequent urination
+Metformin,"high blood sugar,thirst",Diabetes,True,high blood sugar thirst,metformin high blood sugar thirst
+Metformin,"frequent urination,thirst",Diabetes,True,frequent urination thirst,metformin frequent urination thirst
+Metformin,"high blood sugar,frequent urination,thirst",Diabetes,True,high blood sugar frequent urination thirst,metformin high blood sugar frequent urination thirst
+Glycomet,high blood sugar,Diabetes,True,high blood sugar,glycomet high blood sugar
+Glycomet,frequent urination,Diabetes,True,frequent urination,glycomet frequent urination
+Glycomet,thirst,Diabetes,True,thirst,glycomet thirst
+Glycomet,"high blood sugar,frequent urination",Diabetes,True,high blood sugar frequent urination,glycomet high blood sugar frequent urination
+Glycomet,"high blood sugar,thirst",Diabetes,True,high blood sugar thirst,glycomet high blood sugar thirst
+Glycomet,"frequent urination,thirst",Diabetes,True,frequent urination thirst,glycomet frequent urination thirst
+Glycomet,"high blood sugar,frequent urination,thirst",Diabetes,True,high blood sugar frequent urination thirst,glycomet high blood sugar frequent urination thirst
+Glibenclamide,high blood sugar,Diabetes,True,high blood sugar,glibenclamide high blood sugar
+Glibenclamide,frequent urination,Diabetes,True,frequent urination,glibenclamide frequent urination
+Glibenclamide,thirst,Diabetes,True,thirst,glibenclamide thirst
+Glibenclamide,"high blood sugar,frequent urination",Diabetes,True,high blood sugar frequent urination,glibenclamide high blood sugar frequent urination
+Glibenclamide,"high blood sugar,thirst",Diabetes,True,high blood sugar thirst,glibenclamide high blood sugar thirst
+Glibenclamide,"frequent urination,thirst",Diabetes,True,frequent urination thirst,glibenclamide frequent urination thirst
+Glibenclamide,"high blood sugar,frequent urination,thirst",Diabetes,True,high blood sugar frequent urination thirst,glibenclamide high blood sugar frequent urination thirst
+Amlodipine,high blood pressure,Hypertension,True,high blood pressure,amlodipine high blood pressure
+Amlodipine,dizziness,Hypertension,True,dizziness,amlodipine dizziness
+Amlodipine,chest pain,Hypertension,True,chest pain,amlodipine chest pain
+Amlodipine,"high blood pressure,dizziness",Hypertension,True,high blood pressure dizziness,amlodipine high blood pressure dizziness
+Amlodipine,"high blood pressure,chest pain",Hypertension,True,high blood pressure chest pain,amlodipine high blood pressure chest pain
+Amlodipine,"dizziness,chest pain",Hypertension,True,dizziness chest pain,amlodipine dizziness chest pain
+Amlodipine,"high blood pressure,dizziness,chest pain",Hypertension,True,high blood pressure dizziness chest pain,amlodipine high blood pressure dizziness chest pain
+Losartan,high blood pressure,Hypertension,True,high blood pressure,losartan high blood pressure
+Losartan,dizziness,Hypertension,True,dizziness,losartan dizziness
+Losartan,chest pain,Hypertension,True,chest pain,losartan chest pain
+Losartan,"high blood pressure,dizziness",Hypertension,True,high blood pressure dizziness,losartan high blood pressure dizziness
+Losartan,"high blood pressure,chest pain",Hypertension,True,high blood pressure chest pain,losartan high blood pressure chest pain
+Losartan,"dizziness,chest pain",Hypertension,True,dizziness chest pain,losartan dizziness chest pain
+Losartan,"high blood pressure,dizziness,chest pain",Hypertension,True,high blood pressure dizziness chest pain,losartan high blood pressure dizziness chest pain
+Telmisartan,high blood pressure,Hypertension,True,high blood pressure,telmisartan high blood pressure
+Telmisartan,dizziness,Hypertension,True,dizziness,telmisartan dizziness
+Telmisartan,chest pain,Hypertension,True,chest pain,telmisartan chest pain
+Telmisartan,"high blood pressure,dizziness",Hypertension,True,high blood pressure dizziness,telmisartan high blood pressure dizziness
+Telmisartan,"high blood pressure,chest pain",Hypertension,True,high blood pressure chest pain,telmisartan high blood pressure chest pain
+Telmisartan,"dizziness,chest pain",Hypertension,True,dizziness chest pain,telmisartan dizziness chest pain
+Telmisartan,"high blood pressure,dizziness,chest pain",Hypertension,True,high blood pressure dizziness chest pain,telmisartan high blood pressure dizziness chest pain
+Ibuprofen,joint pain,Pain & Inflammation,False,joint pain,ibuprofen joint pain
+Ibuprofen,swelling,Pain & Inflammation,False,swelling,ibuprofen swelling
+Ibuprofen,muscle pain,Pain & Inflammation,False,muscle pain,ibuprofen muscle pain
+Ibuprofen,"joint pain,swelling",Pain & Inflammation,False,joint pain swelling,ibuprofen joint pain swelling
+Ibuprofen,"joint pain,muscle pain",Pain & Inflammation,False,joint pain muscle pain,ibuprofen joint pain muscle pain
+Ibuprofen,"swelling,muscle pain",Pain & Inflammation,False,swelling muscle pain,ibuprofen swelling muscle pain
+Ibuprofen,"joint pain,swelling,muscle pain",Pain & Inflammation,False,joint pain swelling muscle pain,ibuprofen joint pain swelling muscle pain
+Diclofenac,joint pain,Pain & Inflammation,False,joint pain,diclofenac joint pain
+Diclofenac,swelling,Pain & Inflammation,False,swelling,diclofenac swelling
+Diclofenac,muscle pain,Pain & Inflammation,False,muscle pain,diclofenac muscle pain
+Diclofenac,"joint pain,swelling",Pain & Inflammation,False,joint pain swelling,diclofenac joint pain swelling
+Diclofenac,"joint pain,muscle pain",Pain & Inflammation,False,joint pain muscle pain,diclofenac joint pain muscle pain
+Diclofenac,"swelling,muscle pain",Pain & Inflammation,False,swelling muscle pain,diclofenac swelling muscle pain
+Diclofenac,"joint pain,swelling,muscle pain",Pain & Inflammation,False,joint pain swelling muscle pain,diclofenac joint pain swelling muscle pain
+Voveran,joint pain,Pain & Inflammation,False,joint pain,voveran joint pain
+Voveran,swelling,Pain & Inflammation,False,swelling,voveran swelling
+Voveran,muscle pain,Pain & Inflammation,False,muscle pain,voveran muscle pain
+Voveran,"joint pain,swelling",Pain & Inflammation,False,joint pain swelling,voveran joint pain swelling
+Voveran,"joint pain,muscle pain",Pain & Inflammation,False,joint pain muscle pain,voveran joint pain muscle pain
+Voveran,"swelling,muscle pain",Pain & Inflammation,False,swelling muscle pain,voveran swelling muscle pain
+Voveran,"joint pain,swelling,muscle pain",Pain & Inflammation,False,joint pain swelling muscle pain,voveran joint pain swelling muscle pain

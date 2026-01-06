@@ -16,8 +16,8 @@ interface AuthState {
   isLoggedIn: boolean;
   isLoading: boolean;
   error: string | null;
-  login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string, role?: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<any>;
+  register: (name: string, email: string, password: string, role?: string) => Promise<any>;
   logout: () => void;
   checkAuth: () => Promise<void>;
 }
@@ -47,6 +47,7 @@ export const useAuthStore = create<AuthState>()(
             isLoading: false,
             error: null,
           });
+          return response;
         } catch (error: any) {
           set({
             isLoading: false,
@@ -73,6 +74,7 @@ export const useAuthStore = create<AuthState>()(
             isLoading: false,
             error: null,
           });
+          return response;
         } catch (error: any) {
           set({
             isLoading: false,
